@@ -2,10 +2,10 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
     <title>Rock Paper Scissors Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <script src="main.js"></script>
 </head>
 <body>
@@ -13,8 +13,26 @@
     <div class=scoreboard>
         <div id="player-label" class=badge>Player</div>
         <div id="computer-label" class=badge>Super Computer</div>
-        <span id="user-score"></span>
-        <span id="computer-score"></span>
+        <span id="player-score">0</span>;
+        <span id="computer-score">0</span>
     </div>
+
+    <div class ="result">
+        <p>Paper covers rock. You win!</p>
+
+    </div>
+
+    <div class="choices" id="r">
+        <div class="choice">
+        <img src="images/rock.png" alt="">
+        </div>
+        <div class="choice" id="p">
+            <img src="images/paper.png" alt="">
+        </div>
+        <div class="choice" id="s">
+            <img src="images/scissors.png" alt="">
+        </div>
+    </div>
+    <p id="action-message">Make your move</p>
 </body>
 </html>
