@@ -23,15 +23,24 @@ function win(userChoice, computerChoice){
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}. You win!`;
+    result_p.innerHTML = convertToWord(userChoice) + "😎 beats " + convertToWord(computerChoice) + "💻. You win 🎉!";
+    document.getElementById(userChoice).classList.add('green-glow');
+    setTimeout(function() {document.getElementById(userChoice).classList.remove('green-glow')}, 300);
 }
 
-function lose(){
-    console.log("LOSE");
+function lose(userChoice, computerChoice){
+    computerScore++;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    result_p.innerHTML = convertToWord(computerChoice) + "💻 beats " + convertToWord(userChoice) + "😎. You lose 😢!";
+    document.getElementById(userChoice).classList.add('red-glow');
+    setTimeout(function() {document.getElementById(userChoice).classList.remove('red-glow')}, 300)
 }
 
-function draw(){
-    console.log("DRAW");
+function draw(userChoice,computerChoice){
+    result_p.innerHTML = convertToWord(computerChoice) +" 😎 equals "+ convertToWord(computerChoice) + " 💻. That's a draw ☮️ 🕊 🤝 🕊 ☮️";
+    document.getElementById(userChoice).classList.add('grey-glow');
+    setTimeout(function() {document.getElementById(userChoice).classList.remove('grey-glow')}, 300)
 }
 
 function game(userChoice){
